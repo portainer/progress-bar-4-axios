@@ -38,6 +38,6 @@
     "webpack": "3.5.5"
   },
   "peerDependencies": {
-    "axios": "0.x"
+    "axios": "^1.6.2"
   }
 }

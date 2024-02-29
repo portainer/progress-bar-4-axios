@@ -25,14 +25,16 @@ export function loadProgressBar (config, instance = axios) {
   const setupStopProgress = () => {
     const responseFunc = response => {
       if ((--requestsCounter) === 0) {
-        NProgress.done()
+        // force-done
+        NProgress.done(true)
       }
       return response
     }
 
     const errorFunc = error => {
       if ((--requestsCounter) === 0) {
-        NProgress.done()
+        // force-done
+        NProgress.done(true)
       }
       return Promise.reject(error)
     }
